@@ -6,7 +6,15 @@ import { tirarCarta, unirseMesa } from "./sala.js";
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+
+app.use(cors()); // Habilita CORS para todas las rutas
+
+const io = new Server(server, {
+  cors: {
+    origin: "*", // Puedes poner la URL de tu frontend en lugar de "*"
+    methods: ["GET", "POST"]
+  }
+});
 
 io.on("connection", (socket) => {
   console.log(`🟢 Nuevo jugador conectado: ${socket.id}`);
