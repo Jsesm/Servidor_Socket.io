@@ -3,6 +3,7 @@ import http from "http";
 import { Server } from "socket.io";
 import { handleJoin, handleMove, handleDisconnect } from "./room.js";
 import { tirarCarta, unirseMesa } from "./sala.js";
+import cors from 'cors';
 
 const app = express();
 const server = http.createServer(app);
