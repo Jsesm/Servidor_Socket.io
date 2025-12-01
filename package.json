@@ -1,0 +1,21 @@
+{
+  "name": "X-O-server",
+  "version": "1.0.0",
+  "description": "Servidor multijugador para el juego de tres en raya 5x5 con Socket.io",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
